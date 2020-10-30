@@ -1,0 +1,56 @@
+:root {
+    --grey: #444;
+}
+
+* {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1;
+}
+
+head, script, style, [hidden] {
+    display: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--grey);
+
+    display: flex;
+    flex-direction: column;
+}
+
+body > * {
+    margin: auto;
+}
+
+chat {
+    width: 20%;
+    height: 300px;
+    overflow-y: auto;
+    border: 2px solid #222;
+    border-radius: 2px;
+    background: #777;
+    
+    -webkit-box-shadow: 5px 5px 5px 0px #222;
+    -moz-box-shadow: 5px 5px 5px 0px #222;
+    box-shadow: 5px 5px 5px 0px #222;
+}
+
+message {
+    display: flex;
+    word-wrap: break-word;
+    color: #222;
+    padding: 10px;
+    font-weight: 600;
+}
+
+message:not(:last-child) {
+    border-bottom: 1px solid #222;
+}
