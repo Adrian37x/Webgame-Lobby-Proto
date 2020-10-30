@@ -1,0 +1,8 @@
+# server
+server/node_modules
+server.js
+
+
+# client
+game/node_modules
+game/dist
