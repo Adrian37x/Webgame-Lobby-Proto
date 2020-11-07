@@ -1,11 +1,17 @@
+/* #region General */
 :root {
-    --grey: #444;
+    --primary: #162447;
+    --secondary: #1b1b2f;
+    --blue: #1f4068;
+    --red: #e43f5a;
+    --white: #dedede;
 }
 
 * {
     display: block;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1;
+    color: var(--white);
 }
 
 head, script, style, [hidden] {
@@ -20,7 +26,7 @@ html, body {
 body {
     width: 100%;
     height: 100vh;
-    background: var(--grey);
+    background: var(--primary);
 
     display: flex;
     flex-direction: column;
@@ -29,28 +35,63 @@ body {
 body > * {
     margin: auto;
 }
+/* #endregion */
+
+/* #region Button */
+button {
+    outline: none;
+    border: 1px solid var(--white);
+    border-radius: 2px;
+    background: var(--red);
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover {
+    filter: brightness(85%);
+}
+/* #endregion */
+
+/* #region Input */
+input {
+    background: var(--red);
+    padding: 5px 10px;
+    border: 1px solid var(--white);
+    border-radius: 2px;
+    outline: none;
+    color: var(--white);
+}
+
+::placeholder {
+    color: var(--white);
+}
+/* #endregion */
 
 chat {
     width: 20%;
     height: 300px;
     overflow-y: auto;
-    border: 2px solid #222;
+    border: 2px solid var(--secondary);
     border-radius: 2px;
-    background: #777;
+    background: var(--blue);
     
-    -webkit-box-shadow: 5px 5px 5px 0px #222;
-    -moz-box-shadow: 5px 5px 5px 0px #222;
-    box-shadow: 5px 5px 5px 0px #222;
+    -webkit-box-shadow: 5px 5px 5px 0px var(--secondary);
+    -moz-box-shadow: 5px 5px 5px 0px var(--secondary);
+    box-shadow: 5px 5px 5px 0px var(--secondary);
 }
 
 message {
     display: flex;
     word-wrap: break-word;
-    color: #222;
+    color: var(--secondary);
     padding: 10px;
     font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--red);
 }
 
 message:not(:last-child) {
-    border-bottom: 1px solid #222;
+    border-bottom: 2px solid var(--secondary);
 }

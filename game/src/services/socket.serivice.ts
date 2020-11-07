@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import { Observable } from "rxjs";
 
 export class SocketService {
-    socket: any;
+    private socket: any;
 
     constructor() {
         this.socket = io(location.origin);
